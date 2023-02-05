@@ -14,6 +14,7 @@
 ## 使用技術
 
 - [Nuxt3](https://nuxt.com, "Nuxt3")
+- [kevinmarrec/nuxt-pwa](https://github.com/kevinmarrec/nuxt-pwa-module, "kevinmarrec/nuxt-pwa")
 - [Vue3](https://v3.ja.vuejs.org, "Vue3")
 - [fawmi/vue-google-maps](https://github.com/fawmi/vue-google-maps, "fawmi/vue-google-maps")
 - [TailwindCSS](https://tailwindcss.com, "TailwindCSS")
