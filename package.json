@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --fix ."
+  },
+  "devDependencies": {
+    "@kevinmarrec/nuxt-pwa": "^0.13.0",
+    "@nuxtjs/eslint-config": "^12.0.0",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.33.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nuxt": "3.0.0",
+    "prettier": "^2.8.3"
+  },
+  "dependencies": {
+    "@fawmi/vue-google-maps": "^0.9.72",
+    "@nuxtjs/tailwindcss": "^6.1.3",
+    "daisyui": "^2.43.1",
+    "firebase": "^9.15.0",
+    "firebase-admin": "^11.4.0",
+    "firebase-tools": "^11.17.0",
+    "require": "^2.4.20"
+  }
+}
