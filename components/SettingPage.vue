@@ -1,3 +1,6 @@
+
+import Profile from './Profile.vue';
+
 <template>
   <div class="space-y-8 m-4">
     <Profile></Profile>
