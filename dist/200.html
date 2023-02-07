@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nuxt PWA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Nuxt PWA" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nuxt PWA" />
+    <meta property="og:site_name" content="Nuxt PWA" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/_nuxt/icons/512x512.maskable.43d27045.png" />
+    <link
+      rel="apple-touch-icon"
+      href="/_nuxt/icons/512x512.maskable.43d27045.png"
+      sizes="512x512"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      rel="modulepreload"
+      as="script"
+      crossorigin
+      href="/_nuxt/entry.192ecaba.js"
+    />
+    <link rel="preload" as="style" href="/_nuxt/entry.d7fa785a.css" />
+    <link
+      rel="prefetch"
+      as="script"
+      crossorigin
+      href="/_nuxt/auth.165bba06.js"
+    />
+    <link
+      rel="prefetch"
+      as="script"
+      crossorigin
+      href="/_nuxt/userInfoState.7308cf64.js"
+    />
+    <link
+      rel="prefetch"
+      as="script"
+      crossorigin
+      href="/_nuxt/default.2f488299.js"
+    />
+    <link
+      rel="prefetch"
+      as="script"
+      crossorigin
+      href="/_nuxt/navState.fcbedf6b.js"
+    />
+    <link
+      rel="prefetch"
+      as="script"
+      crossorigin
+      href="/_nuxt/firebaseAuthState.9ed8168b.js"
+    />
+    <link
+      rel="prefetch"
+      as="script"
+      crossorigin
+      href="/_nuxt/index.esm2017.cd6d08be.js"
+    />
+    <link
+      rel="prefetch"
+      as="script"
+      crossorigin
+      href="/_nuxt/error-component.de8abb37.js"
+    />
+    <link rel="stylesheet" href="/_nuxt/entry.d7fa785a.css" />
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () =>
+          navigator.serviceWorker.register('/firebase-messaging-sw.js')
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <div id="__nuxt"></div>
+    <script>
+      window.__NUXT__ = (function (a, b, c, d, e) {
+        return {
+          serverRendered: false,
+          config: {
+            public: {
+              pwaManifest: {
+                name: b,
+                short_name: b,
+                lang: 'ja',
+                start_url: '\u002F?standalone=true',
+                display: 'standalone',
+                background_color: '#ffffff',
+                theme_color: '#000000',
+                icons: [
+                  { src: c, sizes: '512*512', type: a, purpose: d },
+                  {
+                    src: '\u002F_nuxt\u002Ficons\u002F512x512.43d27045.png',
+                    type: a,
+                    sizes: e,
+                    purpose: 'any',
+                  },
+                  { src: c, type: a, sizes: e, purpose: d },
+                ],
+              },
+            },
+            app: {
+              baseURL: '\u002F',
+              buildAssetsDir: '\u002F_nuxt\u002F',
+              cdnURL: '',
+            },
+          },
+          data: {},
+          state: {},
+        };
+      })(
+        'image\u002Fpng',
+        'シグナル',
+        '\u002F_nuxt\u002Ficons\u002F512x512.maskable.43d27045.png',
+        'maskable',
+        '512x512'
+      );
+    </script>
+    <script type="module" src="/_nuxt/entry.192ecaba.js" crossorigin></script>
+  </body>
+</html>

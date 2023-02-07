@@ -4409,7 +4409,7 @@
     "semver" "^7.3.7"
     "strip-indent" "^3.0.0"
 
-"eslint-plugin-vue@^9.7.0":
+"eslint-plugin-vue@^9.7.0", "eslint-plugin-vue@^9.9.0":
   "integrity" "sha512-YbubS7eK0J7DCf0U2LxvVP7LMfs6rC6UltihIgval3azO3gyDwEGVgsCMe1TmDiEkl6GdMKfRpaME6QxIYtzDQ=="
   "resolved" "https://registry.npmjs.org/eslint-plugin-vue/-/eslint-plugin-vue-9.9.0.tgz"
   "version" "9.9.0"

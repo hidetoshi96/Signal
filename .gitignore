@@ -4,7 +4,3 @@ node_modules
 .nitro
 .cache
 .output
-.env
-dist
-sw.*
-cloudFunctions

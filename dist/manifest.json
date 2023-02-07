@@ -1,0 +1,29 @@
+{
+  "name": "シグナル",
+  "short_name": "シグナル",
+  "lang": "ja",
+  "start_url": "/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/_nuxt/icons/512x512.maskable.43d27045.png",
+      "sizes": "512*512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/_nuxt/icons/512x512.43d27045.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/_nuxt/icons/512x512.maskable.43d27045.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ]
+}
