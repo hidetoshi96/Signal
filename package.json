@@ -6,7 +6,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint --fix .",
+    "lint": "eslint --fix .ts, .vue",
     "format-fix": "prettier -w .ts,.vue ."
   },
   "devDependencies": {
