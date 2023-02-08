@@ -82,7 +82,7 @@ export const updateSupporters = (
   sponseeID: string
 ) => {
   const db = getDatabase();
-  runTransaction(ref(db, `users/${sponseeID}/supporters/`), (post) => {
+  return runTransaction(ref(db, `users/${sponseeID}/supporters/`), (post) => {
     if (post) {
       if (post[supporterID]) {
         post[supporterID] = null;

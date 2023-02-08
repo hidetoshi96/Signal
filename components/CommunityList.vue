@@ -121,8 +121,8 @@
                     </svg>
                   </button>
                   <div class="col-span-5">
-                    <div class="font-bold">{{ userID }}</div>
-                    <!-- <div class="text-sm opacity-50">{{ user.id }}</div> -->
+                    <div class="font-bold">{{ users[userID].name }}</div>
+                    <div class="text-sm opacity-50">{{ userID }}</div>
                   </div>
                 </div>
               </td>
@@ -232,6 +232,7 @@
     addUserID,
     deleteUserID,
   } = useGroups();
+  const { users } = useUsers();
   const enteredID = ref('');
   const enteredGroupName = ref('');
 
@@ -251,12 +252,14 @@
     ) as HTMLInputElement)!.checked = false;
   };
   const addUserIDClick = (groupIndex: number, enteredID: string) => {
-    addUserID(groupIndex, enteredID);
-    localStorage.setItem('groups', JSON.stringify(groups.value));
-    enteredID = '';
-    (document.getElementById(
-      `modal${groupIndex}`
-    ) as HTMLInputElement)!.checked = false;
+    if (Object.hasOwn(users.value, enteredID)) {
+      addUserID(groupIndex, enteredID);
+      localStorage.setItem('groups', JSON.stringify(groups.value));
+      enteredID = '';
+      (document.getElementById(
+        `modal${groupIndex}`
+      ) as HTMLInputElement)!.checked = false;
+    }
   };
   const deleteUserIDClick = (groupIndex: number, userIndex: number) => {
     deleteUserID(groupIndex, userIndex);

@@ -16,6 +16,7 @@
 - [kevinmarrec/nuxt-pwa](https://github.com/kevinmarrec/nuxt-pwa-module, 'kevinmarrec/nuxt-pwa')
 - [Vue3](https://v3.ja.vuejs.org, 'Vue3')
 - [fawmi/vue-google-maps](https://github.com/fawmi/vue-google-maps, 'fawmi/vue-google-maps')
+- [vue-chart-3](https://vue-chart-3.netlify.app, 'vue-chart-3')
 - [P2P 地震情報](https://www.p2pquake.net, 'P2P地震情報')
 - [TailwindCSS](https://tailwindcss.com, 'TailwindCSS')
 - [daisyUI](https://daisyui.com, 'daisyUI')

@@ -1,7 +1,7 @@
 <template>
   <div class="space-y-4">
     <h2 class="text-center text-xl font-medium">マイプロフィール</h2>
-    <div class="form-control">
+    <div class="form-control grid grid-cols">
       <div>
         <label class="label">
           <span class="label-text">Name</span>
@@ -96,20 +96,23 @@
           </div>
         </div>
       </div>
+      <div class="mt-4 justify-self-center">
+        <input
+          type="submit"
+          value="save"
+          class="btn btn-primary btn-wide"
+          @click="
+            updateClick(
+              userInfo.id,
+              userInfo.name,
+              userInfo.message,
+              userInfo.urgency
+            )
+          "
+        />
+      </div>
     </div>
-    <input
-      type="submit"
-      value="save"
-      class="btn btn-sm w-full"
-      @click="
-        updateClick(
-          userInfo.id,
-          userInfo.name,
-          userInfo.message,
-          userInfo.urgency
-        )
-      "
-    />
+    <div class="divider"></div>
     <div>
       <label class="label">
         <div>
@@ -131,6 +134,7 @@
   </div>
 </template>
 <script setup>
+  const { getUsers } = useUsers();
   const userInfo = useUserInfo();
   const copyClick = (id) => {
     if (!navigator.clipboard) {
@@ -141,6 +145,7 @@
   };
   const updateClick = async (id, name, message, urgency) => {
     await updateProfile(id, name, message, urgency);
+    getUsers();
     userInfo.value.name = name;
     userInfo.value.message = message;
     userInfo.value.urgency = urgency;

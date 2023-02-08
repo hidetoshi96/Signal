@@ -75,8 +75,8 @@ export const resetPosition = (id: string) => {
   const db = getDatabase();
   const updates: { [key: string]: position } = {};
   updates[`users/${id}/position`] = {
-    lat: 34.26571704774958,
-    lng: 135.1519788915844,
+    lat: 0,
+    lng: 0,
   };
   return update(ref(db), updates);
 };

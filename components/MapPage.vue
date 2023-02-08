@@ -17,7 +17,7 @@
       {{ group.groupName }}
     </a>
   </div>
-  <div style="height: 94%" class="space-y-2">
+  <div style="height: 94%" class="space-y-2 flex flex-col xl:flex-row">
     <Map></Map>
     <TagList></TagList>
   </div>
@@ -25,8 +25,9 @@
 <script setup lang="ts">
   const { groups, selectedGroup, selectGroup } = useGroups();
   const selectedTab = useSelectedTab();
-  const { selectedUsers, getUsers, selectUsers } = useUsers();
+  const { users, selectedUsers, getUsers, selectUsers } = useUsers();
   const { windowClose } = useMarkers();
+  const { setStat } = useUrgencyStat();
 
   const tabClick = (tabName: string) => {
     selectedTab.value = tabName;
@@ -50,5 +51,6 @@
         windowClose(userID);
       }
     }
+    setStat(users.value);
   });
 </script>

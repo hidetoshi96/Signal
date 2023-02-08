@@ -1,5 +1,5 @@
 <template>
-  <div class="h-3/6">
+  <div class="h-3/6 xl:w-3/6 xl:h-full">
     <GMapMap
       :center="mapCenter"
       :zoom="15"

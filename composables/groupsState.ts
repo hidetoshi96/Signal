@@ -14,8 +14,19 @@ export const useGroups = () => {
   };
   const addGroup = (groups: Ref<group[]>) => {
     return () => {
+      let num = 1;
+      while (true) {
+        if (
+          !groups.value.find(
+            (group) => group.groupName === `group${groups.value.length + num}`
+          )
+        ) {
+          break;
+        }
+        num++;
+      }
       groups.value.unshift({
-        groupName: `group${groups.value.length + 1}`,
+        groupName: `group${groups.value.length + num}`,
         userIDs: [],
       });
     };

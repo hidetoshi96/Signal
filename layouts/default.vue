@@ -68,8 +68,8 @@
         <span class="btm-nav-label">Map</span>
       </button>
       <button
-        :class="{ active: selectedNav === 'statistics' }"
-        @click="navClick('statistics')"
+        :class="{ active: selectedNav === 'Statistics' }"
+        @click="navClick('Statistics')"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +132,7 @@
         </svg>
         <span class="btm-nav-label">Groups</span>
       </button>
-      <button
+      <!-- <button
         :class="{ active: selectedNav === 'DevSetting' }"
         @click="navClick('DevSetting')"
       >
@@ -151,7 +151,7 @@
           />
         </svg>
         <span class="btm-nav-label">DevSetting</span>
-      </button>
+      </button> -->
     </div>
   </div>
 </template>

@@ -1,9 +1,10 @@
 <template>
   <div class="h-full">
     <MapPage v-if="selectedTab === 'Map'" />
+    <StatisticsPage v-if="selectedTab === 'Statistics'" />
     <SettingPage v-if="selectedTab === 'Setting'" />
     <GroupsPage v-if="selectedTab === 'Groups'" />
-    <DevSetting v-if="selectedTab === 'DevSetting'" />
+    <!-- <DevSetting v-if="selectedTab === 'DevSetting'" /> -->
   </div>
 </template>
 <script setup lang="ts">
@@ -14,8 +15,9 @@
   const { groups, setGroups } = useGroups();
   const { location, updateLocation, uploadLocation } = useLocation();
   const { permission } = useLocationPermission();
-  const { getUsers } = useUsers();
+  const { users, getUsers } = useUsers();
   const { moveCenter } = useMapCenter();
+  const { setStat } = useUrgencyStat();
   const uploadLocationTime = ref(0);
   const getLocationTime = ref(0);
   const positionChange = ref(false);
@@ -46,6 +48,7 @@
       uploadLocation();
     }
     getUsers();
+    setStat(users.value);
   }, 30000);
 
   setGroups(JSON.parse(localStorage.getItem('groups') as string));

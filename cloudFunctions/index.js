@@ -28,35 +28,8 @@ exports.scheduledFunction = functions.pubsub
     });
   });
 
-exports.earthquakeTest = functions.https.onCall(() => {
+exports.notificationTest = functions.https.onCall(() => {
   return sendMessage();
-});
-
-exports.getAllTokens = functions.https.onCall(() => {
-  return getAllTokens();
-});
-
-exports.getJson = functions.https.onCall(() => {
-  const options = {
-    url: 'https://api.p2pquake.net/v2/history?codes=556',
-    method: 'GET',
-    json: true,
-  };
-  return request(options).then(async (body) => {
-    const loadedEarthquakes = await getLoadedEarthquakes();
-    for (const element of body) {
-      if (!loadedEarthquakes.includes(element.id)) {
-        loadedEarthquakes.push(element.id);
-        setLoadedEarthquakes(loadedEarthquakes);
-        for (const area of element.areas) {
-          if (area.pref === '和歌山' && area.scaleFrom >= 40) {
-            return sendMessage();
-          }
-        }
-      }
-    }
-    return 'non earthquake';
-  });
 });
 
 /**

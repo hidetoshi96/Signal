@@ -1,5 +1,5 @@
 <template>
-  <div class="h-3/6 p-4 overflow-y-scroll">
+  <div class="h-3/6 p-4 overflow-y-scroll xl:w-3/6 xl:h-full">
     <table class="table w-full">
       <tbody>
         <tr
@@ -18,7 +18,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-full h-full"
+                  class="w-full h-full xl:w-3/6 xl:h-3/6 m-auto"
                   :class="{
                     'fill-red-500': user.urgency === '2',
                     'fill-yellow-500': user.urgency === '1',
@@ -74,6 +74,7 @@
                     現在の志願者数：{{ Object.keys(user.supporters).length }}人
                   </div>
                   <button
+                    v-if="userID !== userInfo?.id"
                     class="btn btn-xs btn-primary"
                     @click="
                       supportClick(
@@ -146,7 +147,7 @@
   </div>
 </template>
 <script setup lang="ts">
-  const { users, selectedUsers } = useUsers();
+  const { users, selectedUsers, getUsers } = useUsers();
   const { moveCenter } = useMapCenter();
   const userInfo = useUserInfo();
   const R = Math.PI / 180;
@@ -164,12 +165,13 @@
         )
     );
   };
-  const supportClick = (
+  const supportClick = async (
     supporterID: string,
     supporterName: string,
     sponseeID: string
   ) => {
-    updateSupporters(supporterID, supporterName, sponseeID);
+    await updateSupporters(supporterID, supporterName, sponseeID);
+    getUsers();
   };
 </script>
 <!-- 削除したユーザーデータでエラーが出る可能性あり現時点で対策なし -->
